@@ -1,0 +1,22 @@
+plugins {
+    id("application")
+    id("org.openjfx.javafxplugin") version "0.0.8"
+}
+
+group = "org.github.aponkratov.converter"
+version = "0.0.1"
+mainClassName = "ConverterApp"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.jfoenix:jfoenix:9.0.8'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+javafx {
+    version = "13"
+    modules("javafx.controls", "javafx.fxml", "javafx.graphics", "javafx.media", "javafx.swing", "javafx.web")
+}

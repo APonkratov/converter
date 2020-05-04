@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="210.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.github.aponkratov.converter.CurrencyController">
+   <top>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="688.0" text="Currency converter" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <HBox>
+            <VBox.margin>
+               <Insets bottom="20.0" left="20.0" right="20.0" />
+            </VBox.margin>
+            <JFXComboBox fx:id="currencyFrom" minWidth="120.0" promptText="Currency from">
+               <HBox.margin>
+                  <Insets left="20.0" right="10.0" />
+               </HBox.margin>
+            </JFXComboBox>
+            <JFXComboBox fx:id="currencyTo" minWidth="120.0" promptText="Currency to">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </JFXComboBox>
+         </HBox>
+         <JFXTextField fx:id="givenAmount" labelFloat="true" prefHeight="25.0" promptText="Input amount and press Enter">
+            <VBox.margin>
+               <Insets bottom="20.0" left="10.0" right="10.0" />
+            </VBox.margin>
+         </JFXTextField>
+         <JFXTextField fx:id="convertedAmount" editable="false" labelFloat="true" prefHeight="25.0" promptText="Converted amount">
+            <VBox.margin>
+               <Insets left="10.0" right="10.0" />
+            </VBox.margin>
+         </JFXTextField>
+      </VBox>
+   </center>
+   <bottom>
+      <JFXButton fx:id="btnConvert" buttonType="RAISED" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" text="Convert" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" top="30.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </bottom>
+</BorderPane>
